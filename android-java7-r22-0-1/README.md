@@ -1,23 +1,21 @@
 # android-java7
 
 This docker is to build Android Gradle project with Java 7.
-It is available on Docker Hub https://registry.hub.docker.com/u/jacekmarchwicki/android/ .
+It is available on Docker Hub https://registry.hub.docker.com/u/azinger/android/ .
 
 Contains:
 
-* Android SDK: r24.1.2
-* Build tools: 22.0.1
-* Android API: 22
+* Android API: 23
 * Support maven repository
 * Google maven repository
-* Arm emulator: v22
+* Arm emulator: v23
 * Platform tools
 * Created emulator image named: "Nexus 5"
 
 ## Build image
 
 ```bash
-docker build -t jacekmarchwicki/android .
+docker build -t azinger/android .
 ```
 
 If building fail you can debug via where `1b372b1f76f2` is partial build
@@ -29,13 +27,13 @@ docker run --tty --interactive --rm 1b372b1f76f2 /bin/bash
 ## Push build version to repository
 
 ```bash
-docker push jacekmarchwicki/android:java7
+docker push azinger/android:java7
 ```
 
 ## Usage
 Change directory to your project directory, than run:
 
 ```bash
-docker run --tty --interactive --volume=$(pwd):/opt/workspace --workdir=/opt/workspace --rm jacekmarchwicki/android:java7  /bin/sh -c "./gradlew build"
+docker run --tty --interactive --volume=$(pwd):/opt/workspace --workdir=/opt/workspace --rm azinger/android:java7  /bin/sh -c "./gradlew build"
 ```
 
