@@ -4,6 +4,8 @@
 
 set +e
 
+echo "this one 22"
+
 bootanim=""
 failcounter=0
 until [[ "$bootanim" =~ "stopped" ]]; do

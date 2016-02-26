@@ -3,7 +3,7 @@
 # Originally written by Ralf Kistner <ralf@embarkmobile.com>, but placed in the public domain
 
 set +e
-
+echo "this is 7"
 bootanim=""
 failcounter=0
 until [[ "$bootanim" =~ "stopped" ]]; do

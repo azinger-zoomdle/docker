@@ -25,16 +25,6 @@ RUN ["/opt/tools/android-accept-licenses.sh", "android update sdk --all --no-ui 
 RUN which adb
 RUN which android
 
-# Create emulator
-RUN echo "no" | android create avd \
-                --force \
-                --device "Nexus 5" \
-                --name test \
-                --target android-23 \
-                --abi armeabi-v7a \
-                --skin WVGA800 \
-                --sdcard 512M
-
 # Cleaning
 RUN apt-get clean
 
