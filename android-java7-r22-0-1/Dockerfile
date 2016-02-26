@@ -20,7 +20,7 @@ ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 # Install sdk elements
 COPY tools /opt/tools
 ENV PATH ${PATH}:/opt/tools
-RUN ["/opt/tools/android-accept-licenses.sh", "android update sdk --all --no-ui --filter extra-google-m2repository,platform-tools,tools,build-tools-22.0.1,android-22,addon-google_apis_x86-google-23,sys-img-armeabi-v7a-android-23,extra-android-support,extra-android-m2repository,extra-google-google_play_services,android-17,android-23"]
+RUN ["/opt/tools/android-accept-licenses.sh", "android update sdk --all --no-ui --filter extra-google-m2repository,platform-tools,tools,build-tools-21.1.2,build-tools-22.0.1,android-22,addon-google_apis_x86-google-23,sys-img-armeabi-v7a-android-23,extra-android-support,extra-android-m2repository,extra-google-google_play_services,android-17,android-23"]
 
 RUN which adb
 RUN which android
